@@ -15,4 +15,31 @@ for i in range (3,n+1):
 	a=b
 	b=c
 print (c)
+code:
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    
+    a, b = 0, 1
+    for _ in range(2, n):
+        a, b = b, a + b
+        
+    return b
+
+# Example usage:
+try:
+    month = int(input("Enter the month index to get the amoeba's size: "))
+    size = fibonacci(month)
+    print(f"The size of the amoeba in month {month} is: {size}")
+except ValueError:
+    print("Please enter a valid integer.")
+....
+output:
+Enter the month index to get the amoeba's size: 5
+The size of the amoeba in month 5 is: 3
+​
 
